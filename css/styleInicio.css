@@ -1,0 +1,241 @@
+:root{
+    --width: 400px;
+    --paddinig:10px;
+    --bgcolor:rgb(52,52,52);
+    --hovercolor:rgb(23,23,23);
+    --width-collapsed:50px;
+}
+
+body{
+    background-image: linear-gradient(to top, #fff1eb 25%, #ace0f9 100%);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    padding: 0;
+    margin: 0;
+    margin-left: var(--width-collapsed);
+}
+.body-expanded{
+    margin-left: var(--width);
+
+}
+#main-cointainer{
+
+    color:aliceblue;
+
+}
+#sidemenu{
+    background-color: var(--bgcolor);
+    color:aliceblue;
+    position: fixed;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+#sidemenu a{
+    color: aliceblue;
+    text-decoration: none;
+}
+/*
+
+    HEADER 
+
+*/
+
+#sidemenu #header{
+    box-sizing: border-box;
+    border-bottom: solid 1px var(--hovercolor);
+}
+#sidemenu #header #title{
+    box-sizing: border-box;
+    overflow: hidden;
+}
+#sidemenu #header #title, #sidemenu #header #menu-btn{
+    vertical-align: middle;
+}
+#sidemenu #header #menu-btn{
+
+    display: inline-block;
+    
+}
+#sidemenu #header #menu-btn{
+
+    cursor:pointer;
+    padding: 10px;
+    width: var(--width-collapsed);
+    box-sizing: border-box;
+    
+}
+
+#sidemenu #header #menu-btn:hover{
+    background-color: var(--hovercolor);
+
+}
+#sidemenu #header #menu-btn .btn-hamburger{
+    background-color: aliceblue;
+    width: 100%;
+    height: 2px;
+    margin: 5px 0;
+
+}
+/*
+
+    PERFIL
+
+*/
+#sidemenu #perfil {
+    border-bottom: solid 1px var(--hovercolor);
+    padding: var(--paddinig) 0;
+    text-align: center;
+}
+#sidemenu #perfil #foto{
+    box-sizing: border-box;
+    padding: var(--paddinig);
+    margin: 0 auto;
+
+}
+#sidemenu #perfil #foto img{
+
+    border-radius: 50%;
+    width:50%;
+
+}
+#sidemenu #perfil #foto, #sidemenu #perfil #name{
+    font-size: 24px;
+    padding: var(--paddinig)0;
+    overflow: hidden;
+}
+/*
+
+    ITEMS
+
+*/
+#sidemenu #menu-items{
+
+    overflow: hidden;
+}
+#sidemenu #menu-items .item{
+    width: var(--width);
+}
+#sidemenu #menu-items .item .icon,
+#sidemenu #menu-items .item .title{
+    font-size: 14px;
+    vertical-align: middle;
+    overflow: hidden;
+    display: inline-block;
+}
+#sidemenu #menu-items .item a{
+    display: block;
+}
+
+#sidemenu #menu-items .item a:hover{
+    background-color: var(--hovercolor);
+
+}
+#sidemenu #menu-items .item .icon{
+    box-sizing: border-box;
+    padding: var(--paddinig);
+    width: var(--width-collapsed);
+}
+#sidemenu #menu-items .item .icon img{
+    width: 100%;
+}
+#sidemenu #menu-items .item .title{
+    padding: var(--paddinig)0;
+
+}
+#sidemenu #menu-items .item .separator{
+    height: 1px;
+    border-bottom: solid 1px var(--hovercolor);
+    margin: 15px 0;
+}
+/*
+
+Item de cerrar sesión
+
+*/
+#sidemenu #menu-items .item-Log{
+    position: relative;
+    width: var(--width);
+}
+#sidemenu #menu-items .item-Log .icon,
+#sidemenu #menu-items .item-Log .title{
+    font-size: 14px;
+    vertical-align: middle;
+    overflow: hidden;
+    display: inline-block;
+}
+#sidemenu #menu-items .item-Log a{
+    display: block;
+}
+
+#sidemenu #menu-items .item-Log a:hover{
+    background-color: var(--hovercolor);
+
+}
+#sidemenu #menu-items .item-Log .icon{
+    box-sizing: border-box;
+    padding: var(--paddinig);
+    width: var(--width-collapsed);
+}
+#sidemenu #menu-items .item-Log .icon img{
+    width: 100%;
+}
+#sidemenu #menu-items .item-Log .title{
+    padding: var(--paddinig)0;
+
+}
+/*
+Estilos de la cabecera
+*/
+.Cabecera{
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    margin-top:3px;
+
+}
+/*
+
+    Evento de movimiento de la side bar
+
+*/
+.menu-expanded{
+    width: var(--width);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.menu-expanded #header #title{
+    display: inline-block;
+    width: calc(100% - 50px);
+    margin-right: -5px;
+    padding: var(--paddinig);
+}
+
+.menu-expanded #header #title span{
+    width: calc(var(--width) - var(--width-collapsed) - 5px);
+    overflow: hidden;
+    
+}
+
+.menu-expanded #perfil #foto{
+    width: 200px;
+}
+.menu-expanded #perfil #name{
+    width: 100%;
+
+}
+.menu-collapsed {
+    width: var(--width-collapsed);
+}
+
+.menu-collapsed #header #title{
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+}
+.menu-collapsed #perfil #name{
+    display: none;
+}
+.menu-collapsed .item{
+    width: 100px;
+}
